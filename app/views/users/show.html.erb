@@ -1,0 +1,18 @@
+<div class="main user-show">
+  <div class="container">
+    <div class="user">
+      <img src = "<%= "/user_images/#{@user.image_name}" %>" >
+      <h2><%= @user.name %></h2>
+      <p><%= @user.email %></p>
+    </div>
+    <div class="user-menus">
+      <% if @user.id == @current_user.id %>
+        <%= link_to("編集", "/users/#{@user.id}/edit") %>
+      <% end %>
+    </div>
+    <ul class="user-tabs">
+      <li class="active"><%= link_to("行った", "/users/#{@user.id}/done") %></li>
+      <li><%= link_to("行きたい", "/users/#{@user.id}/wanna") %></li>
+    </ul>
+  </div>
+</div>
