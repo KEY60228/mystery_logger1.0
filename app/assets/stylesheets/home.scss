@@ -34,9 +34,56 @@ header {
 }
 
 /* top ================================ */
+.top-container {
+  width: 100%;
+  margin: 0;
+  height: 640px;
+  background-size: cover;
+  background-image: url("/exit2.jpg");
+  text-align: center;
+}
 
+.top-message {
+  width: auto;
+  margin: 0 auto;
+}
+
+.top-message h1 {
+  padding-top: 180px;
+  font-size: 72px;
+  color: white;
+}
+
+.top-message p {
+  font-size: 36px;
+  color: white;
+}
 
 /* about ================================ */
+.about-container {
+  width: 100%;
+  margin: 0;
+  height: 640px;
+  background-size: cover;
+  background-image: url("/exit2.jpg");
+}
+
+.about-message {
+  width: auto;
+  margin-left: 50px;
+}
+
+.about-message h1 {
+  padding-top: 180px;
+  font-size: 36px;
+  color: white;
+}
+
+.about-message p {
+  padding-top: 36px;
+  font-size: 16px;
+  color: white;
+}
 
 
 /* フォーム================================ */
@@ -46,7 +93,7 @@ header {
 .flash {
   padding: 10px 0;
   color: white;
-  background: rgb(251, 170, 88);
+  background: darkorange;
   text-align: center;
   position: absolute;
   top: 64px;
