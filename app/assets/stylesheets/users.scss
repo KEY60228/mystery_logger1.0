@@ -4,4 +4,70 @@
 /* users/show ================================ */
 
 
-/* users/new, users/edit ================================ */
+/* users/new ================================ */
+.background-image {
+  width: 100%;
+  margin: 0;
+  height: 640px;
+  position: absolute;
+  top: 64px;
+  background-size: cover;
+  background-image: url("/exit2.jpg");
+}
+
+.signup-container {
+  position: absolute;
+  top: 64px;
+  margin-left: 64px;
+  color: white;
+}
+
+.signup-container h1 {
+  margin-bottom: 15px;
+}
+
+.signup-form input {
+  margin-bottom: 10px;
+}
+
+.signup-form p {
+  margin-bottom: 5px;
+}
+
+.signup-error-message {
+  color: red;
+}
+
+/* users/login_form ================================ */
+.background-image {
+  width: 100%;
+  margin: 0;
+  height: 640px;
+  position: absolute;
+  top: 64px;
+  background-size: cover;
+  background-image: url("/exit2.jpg");
+}
+
+.login-container {
+  position: absolute;
+  top: 64px;
+  margin-left: 64px;
+  color: white;
+}
+
+.login-container h1 {
+  margin-bottom: 15px;
+}
+
+.login-form input {
+  margin-bottom: 10px;
+}
+
+.login-form p {
+  margin-bottom: 5px;
+}
+
+.login-error-message {
+  color: red;
+}
