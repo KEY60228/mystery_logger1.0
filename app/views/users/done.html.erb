@@ -1,6 +1,6 @@
-<div class="main user-show">
-  <div class="container">
-    <div class="user">
+<div class="user-show-main">
+  <div class="user-show-container">
+    <div class="user-profile">
       <img src = "<%= "/user_images/#{@user.image_name}" %>" >
       <h2><%= @user.name %></h2>
       <p><%= @user.email %></p>
@@ -10,20 +10,22 @@
         <%= link_to("編集", "/users/#{@user.id}/edit") %>
       <% end %>
     </div>
-    <ul class="user-tabs">
-      <li class="active"><%= link_to("行った", "/users/#{@user.id}/done") %></li>
-      <li><%= link_to("行きたい", "/users/#{@user.id}/wanna") %></li>
+    <ul class="nav justify-content-center nav-pills">
+      <li class="nav-item">
+        <%= link_to("行った", "/users/#{@user.id}/done", {class: "nav-link active"}) %>
+      </li>
+      <li class="nav-item">
+        <%= link_to("行きたい", "/users/#{@user.id}/wanna", {class: "nav-link"}) %>
+      </li>
     </ul>
-    <% @dones.each do |done| %>
-      <% performance = Performance.find_by(id: done.performance_id) %>
-      <div class="container">
+    <div class="performances-show-container">
+      <% @dones.each do |done| %>
+        <% performance = Performance.find_by(id: done.performance_id) %>
         <div class="performances-show-item">
-          <img src="<%= performance.image_name %>">
-          <p>
+          <img src="<%= performance.image_name %>"><br>
           <%= link_to(performance.contents, "/performances/#{performance.id}") %>
-          </p>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

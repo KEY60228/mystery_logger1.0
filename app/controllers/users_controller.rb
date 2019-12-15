@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user, {only: [:index, :edit, :update, :show, :logout]}
   before_action :forbid_login_user, {only: [:login_form, :login, :new, :create, ]}
   before_action :ensure_correct_user, {only: [:edit, :update]}
+  before_action :forbidden_page, {only: [:index]}
 
   def index
     @users = User.all
@@ -15,7 +16,7 @@ class UsersController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       flash[:notice] = "ログインしました"
-      redirect_to("/performances/index")
+      redirect_to("/users/#{@user.id}")
     else
       @error_message = "メールアドレスまたはパスワードが間違っています"
       @email = params[:email]

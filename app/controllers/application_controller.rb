@@ -19,4 +19,9 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def forbidden_page
+    flash[:notice] = "権限がありません"
+    redirect_to("/users/#{@current_user.id}")
+  end
+
 end
