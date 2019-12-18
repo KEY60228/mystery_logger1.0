@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user
   before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
+  before_action :forbidden_page, {only: [:index]}
 
   def index
     @posts = Post.all
@@ -9,10 +10,11 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @performances = Performance.all
   end
 
   def create
-    @post = Post.new(content: params[:content], user_id: @current_user.id)
+    @post = Post.new(content: params[:content], user_id: @current_user.id, performance_id: params[:performance_id])
     if @post.save
       flash[:notice] = "投稿しました"
       redirect_to("/performances/index")
@@ -24,10 +26,12 @@ class PostsController < ApplicationController
   def show
     @post = Post.find_by(id: params[:id])
     @user = @post.user
+    @performance = Performance.find_by(id: @post.performance_id)
   end
 
   def edit
     @post = Post.find_by(id: params[:id])
+    @performances = Performance.all
   end
 
   def update

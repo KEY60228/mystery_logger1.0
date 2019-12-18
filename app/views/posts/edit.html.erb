@@ -1,18 +1,24 @@
-<div class="main posts-new">
-  <div class="container">
-    <h1 class="form-heading">編集する</h1>
+<div class="posts-edit-main">
+  <div class="posts-edit-container">
+    <h1>編集する</h1>
     <%= form_tag ("/posts/#{@post.id}/update") do %>
-    <div class="form">
-      <div class="form-body">
-      <% @post.errors.full_messages.each do |message| %>
-        <div class="form-error">
-          <%= message %>
+      <div class="posts-edit-form">
+        <% @post.errors.full_messages.each do |message| %>
+          <div class="post-error-message">
+            <%= message %>
+          </div>
+        <% end %>
+        <div class="form-group">
+          <label for="choosePerformance">公演</label>
+          <select class="form-control" id="choosePerformance" name="performance_id">
+            <% @performances.each do |performance| %>
+              <option><%= performance.id %>. <%= performance.contents %></option>
+            <% end %>
+          </select>
         </div>
-      <% end %>
-        <textarea name="content"><%= @post.content %></textarea>
-        <input type="submit" value="保存">
+        <textarea name="content"><%= @post.content %></textarea><br>
+        <input type="submit" value="投稿">
       </div>
-    </div>
     <% end %>
   </div>
 </div>
