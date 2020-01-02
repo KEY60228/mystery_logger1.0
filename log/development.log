@@ -34378,3 +34378,358 @@ Processing by UsersController#done as HTML
 Completed 200 OK in 90ms (Views: 83.1ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/" for ::1 at 2019-12-29 22:19:25 +0900
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yamaguchikenta/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/users/1
+Filter chain halted as :forbid_login_user rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-12-29 22:19:25 +0900
+Processing by UsersController#done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75
+  Rendering users/done.html.erb within layouts/application
+  [1m[36mDone Load (0.6ms)[0m  [1m[34mSELECT "dones".* FROM "dones" WHERE "dones"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/done.html.erb:22
+  [1m[36mPerformance Load (0.6ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.1ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.1ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  Rendered users/done.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 1375ms (Views: 1363.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/1" for ::1 at 2019-12-29 22:19:27 +0900
+Processing by UsersController#done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75
+  Rendering users/done.html.erb within layouts/application
+  [1m[36mDone Load (0.3ms)[0m  [1m[34mSELECT "dones".* FROM "dones" WHERE "dones"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/done.html.erb:22
+  [1m[36mPerformance Load (0.3ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.2ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.2ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  Rendered users/done.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 146ms (Views: 140.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/logout" for ::1 at 2019-12-29 22:19:31 +0900
+Processing by UsersController#logout as HTML
+  Parameters: {"authenticity_token"=>"qtc7hNonD6xQeQ+hj3k1az8PpudG8IsmboMnwBGPP6gstgcCmdAS0PvYNP8yIZyBxPyglcXe285U7ommWbYbSQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/login
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for ::1 at 2019-12-29 22:19:31 +0900
+Processing by UsersController#login_form as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering users/login_form.html.erb within layouts/application
+  Rendered users/login_form.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 76ms (Views: 72.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-12-29 22:19:34 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 96ms (Views: 87.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-12-29 22:19:40 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 91ms (Views: 84.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for ::1 at 2019-12-29 22:19:42 +0900
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 71ms (Views: 65.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-12-29 22:19:43 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 66ms (Views: 61.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-12-29 22:19:45 +0900
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 70ms (Views: 60.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/about" for ::1 at 2019-12-29 22:19:47 +0900
+Processing by HomeController#about as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 80ms (Views: 73.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for ::1 at 2019-12-29 22:19:48 +0900
+Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 65ms (Views: 56.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for ::1 at 2019-12-29 22:19:49 +0900
+Processing by UsersController#login_form as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering users/login_form.html.erb within layouts/application
+  Rendered users/login_form.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/login" for ::1 at 2019-12-29 22:19:56 +0900
+Processing by UsersController#login as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KkXLny2zq4k4wIvKnSBufq4hcYUtuSaRN4Te4iRy1aEMXvbTUT28tiP58Qwe0BGz7hnzW15BDFFd4jB2GarcFw==", "email"=>"gucci@gmail.com", "password"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gucci@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:15
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 242ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for ::1 at 2019-12-29 22:19:56 +0900
+Processing by UsersController#done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75
+  Rendering users/done.html.erb within layouts/application
+  [1m[36mDone Load (0.1ms)[0m  [1m[34mSELECT "dones".* FROM "dones" WHERE "dones"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/done.html.erb:22
+  [1m[36mPerformance Load (0.1ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.1ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.1ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  Rendered users/done.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 59ms (Views: 55.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for ::1 at 2019-12-29 22:20:01 +0900
+Processing by UsersController#done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75
+  Rendering users/done.html.erb within layouts/application
+  [1m[36mDone Load (0.2ms)[0m  [1m[34mSELECT "dones".* FROM "dones" WHERE "dones"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/done.html.erb:22
+  [1m[36mPerformance Load (0.1ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.1ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.2ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  Rendered users/done.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 67ms (Views: 61.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/performances/index" for ::1 at 2019-12-29 22:20:02 +0900
+Processing by PerformancesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering performances/index.html.erb within layouts/application
+  [1m[36mPerformance Load (0.3ms)[0m  [1m[34mSELECT "performances".* FROM "performances"[0m
+  ↳ app/views/performances/index.html.erb:4
+  Rendered performances/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 64ms (Views: 57.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-12-29 22:20:05 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mPerformance Load (0.2ms)[0m  [1m[34mSELECT "performances".* FROM "performances"[0m
+  ↳ app/views/posts/new.html.erb:14
+  Rendered posts/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 94ms (Views: 70.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/performances/index" for ::1 at 2019-12-29 22:20:10 +0900
+Processing by PerformancesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering performances/index.html.erb within layouts/application
+  [1m[36mPerformance Load (0.4ms)[0m  [1m[34mSELECT "performances".* FROM "performances"[0m
+  ↳ app/views/performances/index.html.erb:4
+  Rendered performances/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 83ms (Views: 76.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-12-29 22:20:11 +0900
+Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mPerformance Load (0.3ms)[0m  [1m[34mSELECT "performances".* FROM "performances"[0m
+  ↳ app/views/posts/new.html.erb:14
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 71ms (Views: 65.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts/create" for ::1 at 2019-12-29 22:20:18 +0900
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vwYxPzceQd1iIAts2x+8mZ4ihIhy7BR9qPwj4ITXZCi8XXM8IuIusyUL/oCnaZI2yXM2JE9Du9soTnTswCZnIw==", "performance_id"=>"4. ヴァンパイアホテルからの脱出", "content"=>"Great"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[36mPost Create (1.4ms)[0m  [1m[32mINSERT INTO "posts" ("content", "created_at", "updated_at", "performance_id", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Great"], ["created_at", "2019-12-29 13:20:18.472713"], ["updated_at", "2019-12-29 13:20:18.472713"], ["performance_id", 4], ["user_id", 1]]
+  ↳ app/controllers/posts_controller.rb:18
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/posts_controller.rb:18
+Redirected to http://localhost:3000/performances/index
+Completed 302 Found in 10ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/performances/index" for ::1 at 2019-12-29 22:20:18 +0900
+Processing by PerformancesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering performances/index.html.erb within layouts/application
+  [1m[36mPerformance Load (0.2ms)[0m  [1m[34mSELECT "performances".* FROM "performances"[0m
+  ↳ app/views/performances/index.html.erb:4
+  Rendered performances/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 69ms (Views: 65.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/performances/4" for ::1 at 2019-12-29 22:20:23 +0900
+Processing by PerformancesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mPerformance Load (0.2ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/performances_controller.rb:8
+  Rendering performances/show.html.erb within layouts/application
+  [1m[36mDone Load (0.3ms)[0m  [1m[34mSELECT  "dones".* FROM "dones" WHERE "dones"."user_id" = ? AND "dones"."performance_id" = ? LIMIT ?[0m  [["user_id", 1], ["performance_id", 4], ["LIMIT", 1]]
+  ↳ app/views/performances/show.html.erb:8
+  [1m[36mWanna Load (0.4ms)[0m  [1m[34mSELECT  "wannas".* FROM "wannas" WHERE "wannas"."user_id" = ? AND "wannas"."performance_id" = ? LIMIT ?[0m  [["user_id", 1], ["performance_id", 4], ["LIMIT", 1]]
+  ↳ app/views/performances/show.html.erb:17
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."performance_id" = ?[0m  [["performance_id", 4]]
+  ↳ app/views/performances/show.html.erb:27
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/post.rb:7
+  Rendered performances/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 88ms (Views: 78.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1" for ::1 at 2019-12-29 22:20:34 +0900
+Processing by UsersController#done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75
+  Rendering users/done.html.erb within layouts/application
+  [1m[36mDone Load (0.2ms)[0m  [1m[34mSELECT "dones".* FROM "dones" WHERE "dones"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/done.html.erb:22
+  [1m[36mPerformance Load (0.1ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.1ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.1ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  Rendered users/done.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 82ms (Views: 70.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1/wanna" for ::1 at 2019-12-29 22:20:35 +0900
+Processing by UsersController#wanna as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:80
+  Rendering users/wanna.html.erb within layouts/application
+  [1m[36mWanna Load (0.3ms)[0m  [1m[34mSELECT "wannas".* FROM "wannas" WHERE "wannas"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/wanna.html.erb:22
+  [1m[36mPerformance Load (0.2ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/users/wanna.html.erb:23
+  [1m[36mPerformance Load (0.2ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/users/wanna.html.erb:23
+  Rendered users/wanna.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 87ms (Views: 77.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-01-02 12:39:32 +0900
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/yamaguchikenta/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/users/1
+Filter chain halted as :forbid_login_user rendered or redirected
+Completed 302 Found in 28ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1" for ::1 at 2020-01-02 12:39:32 +0900
+Processing by UsersController#done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:75
+  Rendering users/done.html.erb within layouts/application
+  [1m[36mDone Load (0.7ms)[0m  [1m[34mSELECT "dones".* FROM "dones" WHERE "dones"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/views/users/done.html.erb:22
+  [1m[36mPerformance Load (0.6ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.3ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.2ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  Rendered users/done.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 859ms (Views: 844.4ms | ActiveRecord: 3.9ms)
+
+
