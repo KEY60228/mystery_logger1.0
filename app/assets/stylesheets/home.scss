@@ -41,7 +41,8 @@ header {
 .top-container {
   width: 100%;
   margin: 0;
-  height: 640px;
+  height: auto;
+  min-height: 100vh;
   background-size: cover;
   background-image: url("/exit2.jpg");
   text-align: center;
@@ -69,7 +70,8 @@ header {
 .about-container {
   width: 100%;
   margin: 0;
-  height: 640px;
+  height: auto;
+  min-height: 100vh;
   background-size: cover;
   background-image: url("/exit2.jpg");
   position: absolute;

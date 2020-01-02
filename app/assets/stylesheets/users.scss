@@ -4,6 +4,7 @@
   top: 64px;
   width: 100%;
   height: auto;
+  min-height: 100vh;
   margin: 0;
   background-color: beige;
 }
@@ -72,6 +73,7 @@
   top: 64px;
   width: 100%;
   height: auto;
+  min-height: 100vh;
   margin: 0;
   background-color: beige;
 }
@@ -118,7 +120,8 @@
 .background-image {
   width: 100%;
   margin: 0;
-  height: 640px;
+  height: auto;
+  min-height: 100vh;
   position: absolute;
   top: 64px;
   background-size: cover;
@@ -156,7 +159,8 @@
 .background-image {
   width: 100%;
   margin: 0;
-  height: 640px;
+  height: auto;
+  min-height: 100vh;
   position: absolute;
   top: 64px;
   background-size: cover;
