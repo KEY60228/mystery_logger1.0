@@ -7,14 +7,16 @@
           <%= message %>
         </div>
       <% end %>
-      <%= form_tag ("/users/create") do %>
-        <p>ユーザー名</p>
+      <%= form_tag("/users/create", {multipart: true}) do %>
+        <p>ユーザー名(必須)</p>
         <input name="name" value="<%= @user.name %>">
-        <p>メールアドレス</p>
+        <p>メールアドレス(必須)</p>
         <input name="email" value="<%= @user.email %>">
-        <p>パスワード</p>
-        <input name="password" value="<%= @user.password %>" type="password"><br>
-        <input type="submit" value="新規登録">
+        <p>パスワード(必須)</p>
+        <input name="password" value="<%= @user.password %>" type="password">
+        <p>プロフィール画像</p>
+        <input name="image" type="file"><br>
+        <input type="submit" value="新規登録" class="submit-btn">
       <% end %>
     </div>
   </div>

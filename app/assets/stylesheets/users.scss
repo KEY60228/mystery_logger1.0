@@ -14,6 +14,7 @@
   top: 64px;
   width: 100%;
   height: auto;
+  min-height: 100vh;
   margin: 0;
   background-color: beige;
 }
@@ -147,6 +148,10 @@
   color: red;
 }
 
+.submit-btn {
+  margin-top: 15px;
+}
+
 /* users/login_form ================================ */
 .background-image {
   width: 100%;
@@ -179,4 +184,8 @@
 
 .login-error-message {
   color: red;
+}
+
+.submit-btn {
+  margin-top: 15px;
 }

@@ -41,6 +41,11 @@ class UsersController < ApplicationController
                       email: params[:email],
                       password: params[:password]
                     )
+    if params[:image]
+      @user.image_name = "#{@user.id}.jpg"
+      image = params[:image]
+      File.binwrite("public/user_images/#{@user.image_name}", image.read)
+    end
     if @user.save
       session[:user_id] = @user.id
       flash[:notice] = "登録完了しました"
