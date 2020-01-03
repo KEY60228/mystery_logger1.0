@@ -26,4 +26,3 @@ test:
 production:
   <<: *default
   database: mystery_logger_production
-  url: <%= ENV[postgres://iovoyswpdnudxq:3af510669b901dad9e5ab043bcfc2bea4d59113517c2045dbf254e34df48fe79@ec2-174-129-33-167.compute-1.amazonaws.com:5432/db1jpav6ducmsi] %>
