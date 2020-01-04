@@ -9,7 +9,7 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: yamaguchikenta
-  host: local
+  host: localhost
   timeout: 5000
 
 development:
@@ -31,3 +31,4 @@ production:
   pool: 5
   url: <%= ENV[postgres://iovoyswpdnudxq:3af510669b901dad9e5ab043bcfc2bea4d59113517c2045dbf254e34df48fe79@ec2-174-129-33-167.compute-1.amazonaws.com:5432/db1jpav6ducmsi] %>
   timeout: 5000
+  host: localhost
