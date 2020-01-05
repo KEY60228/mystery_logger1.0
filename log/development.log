@@ -35808,3 +35808,65 @@ Processing by UsersController#done as HTML
 Completed 200 OK in 126ms (Views: 88.5ms | ActiveRecord: 28.7ms)
 
 
+Started GET "/performances/index" for ::1 at 2020-01-04 19:59:09 +0900
+Processing by PerformancesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering performances/index.html.erb within layouts/application
+  [1m[36mPerformance Load (2.3ms)[0m  [1m[34mSELECT "performances".* FROM "performances"[0m
+  ↳ app/views/performances/index.html.erb:4
+  Rendered performances/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 324ms (Views: 301.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/1" for ::1 at 2020-01-04 19:59:10 +0900
+Processing by UsersController#done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:80
+  Rendering users/done.html.erb within layouts/application
+  [1m[36mDone Load (0.5ms)[0m  [1m[34mSELECT "dones".* FROM "dones" WHERE "dones"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/done.html.erb:22
+  [1m[36mPerformance Load (5.8ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.4ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.3ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  Rendered users/done.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 182ms (Views: 166.8ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/performances/index" for ::1 at 2020-01-04 19:59:11 +0900
+Processing by PerformancesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering performances/index.html.erb within layouts/application
+  [1m[36mPerformance Load (1.2ms)[0m  [1m[34mSELECT "performances".* FROM "performances"[0m
+  ↳ app/views/performances/index.html.erb:4
+  Rendered performances/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 147ms (Views: 129.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/1" for ::1 at 2020-01-04 19:59:15 +0900
+Processing by UsersController#done as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:80
+  Rendering users/done.html.erb within layouts/application
+  [1m[36mDone Load (0.3ms)[0m  [1m[34mSELECT "dones".* FROM "dones" WHERE "dones"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/done.html.erb:22
+  [1m[36mPerformance Load (0.2ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.3ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  [1m[36mPerformance Load (0.2ms)[0m  [1m[34mSELECT  "performances".* FROM "performances" WHERE "performances"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/users/done.html.erb:23
+  Rendered users/done.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 96ms (Views: 80.5ms | ActiveRecord: 2.8ms)
+
+
