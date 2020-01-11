@@ -1,0 +1,114 @@
+/* reset ================================ */
+
+
+/* 共通レイアウト ================================ */
+html, body {
+  height: 100%;
+}
+
+/* ヘッダー ================================ */
+header {
+  background-color: seagreen;
+  height: 64px;
+  width: 100%;
+  line-height: 64px;
+  position: fixed;
+  z-index: 1;
+}
+
+.header-logo a {
+  color: white;
+  float: left;
+  font-size: 24px;
+  padding-left: 15px;
+}
+
+.header-menus {
+  float: right;
+}
+
+.header-menus li{
+  list-style: none;
+  float: left;
+  padding-right: 15px;
+}
+
+.header-menus a {
+  color: white;
+}
+
+/* top ================================ */
+.top-container {
+  width: 100%;
+  margin: 0;
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;
+  background-image: url("/exit2.jpg");
+  text-align: center;
+  position: absolute;
+  top: 64px;
+}
+
+.top-message {
+  width: auto;
+  margin: 0 auto;
+}
+
+.top-message h1 {
+  padding-top: 180px;
+  font-size: 72px;
+  color: white;
+}
+
+.top-message p {
+  font-size: 36px;
+  color: white;
+}
+
+/* about ================================ */
+.about-container {
+  width: 100%;
+  margin: 0;
+  height: auto;
+  min-height: 100vh;
+  background-size: cover;
+  background-image: url("/exit2.jpg");
+  position: absolute;
+  top: 64px;
+}
+
+.about-message {
+  width: auto;
+  margin-left: 50px;
+}
+
+.about-message h1 {
+  padding-top: 180px;
+  font-size: 36px;
+  color: white;
+}
+
+.about-message p {
+  padding-top: 36px;
+  font-size: 16px;
+  color: white;
+}
+
+
+/* フォーム================================ */
+
+
+/* フラッシュ ================================ */
+.flash {
+  padding: 10px 0;
+  color: white;
+  background: darkorange;
+  text-align: center;
+  position: fixed;
+  top: 64px;
+  z-index: 10;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}

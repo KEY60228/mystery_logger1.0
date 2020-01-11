@@ -1,0 +1,41 @@
+<div class="performance-show-main">
+  <div class="performance-show-container">
+    <div class="performance-show-item">
+      <img src="<%= @performance.image_name %>">
+      <p>
+        <%= @performance.contents %>
+      </p>
+      <% if Done.find_by(user_id:@current_user.id, performance_id:@performance.id) %>
+        <%= link_to("/dones/#{@performance.id}/destroy", {method:"post"}) do %>
+          <i class="fas fa-check-circle done-btn-undone"></i>
+        <% end %>
+      <% else %>
+        <%= link_to("/dones/#{@performance.id}/create", {method:"post"}) do %>
+          <i class="fas fa-check-circle done-btn"></i>
+        <% end %>
+      <% end %>
+      <% if Wanna.find_by(user_id:@current_user.id, performance_id:@performance.id) %>
+        <%= link_to("/wannas/#{@performance.id}/destroy", {method:"post"}) do %>
+          <span class="fa fa-heart like-btn-unlike"></span>
+        <% end %>
+      <% else %>  
+        <%= link_to("/wannas/#{@performance.id}/create", {method:"post"}) do %>
+          <span class="fa fa-heart like-btn"></span>
+        <% end %>
+      <% end %>
+    </div>
+    <% @performance.posts.each do |post| %>
+      <div class="performances-index-item">
+        <div class="performance-left">
+          <img src="<%= "/user_images/#{post.user.image_name}" %>">
+        </div>
+        <div class="performance-right">
+          <div class="performance-user-name">
+            <%= link_to(post.user.name, "/users/#{post.user.id}") %>
+          </div>
+          <%= link_to(post.content, "/posts/#{post.id}") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

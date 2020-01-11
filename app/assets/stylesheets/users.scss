@@ -1,0 +1,195 @@
+/* users/index ================================ */
+.users-index-main {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  background-color: beige;
+}
+
+/* users/show, users/done, users/wanna ================================ */
+.user-show-main {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  background-color: beige;
+}
+
+.user-profile {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.user-profile img {
+  width: 150px;
+  height: 150px;
+  margin-top: 36px;
+  border-radius: 100%;
+}
+
+.user-menus {
+  width: 400px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+.nav-item {
+  width: 150px;
+  text-align: center;
+}
+
+.performances-show-container {
+  width: 660px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-around;
+}
+
+.performances-show-item {
+  text-align: center;
+  margin: auto 10px;
+}
+
+.performances-show-item img {
+  height: 300px;
+  width: 200px;
+}
+
+.performances-show-item a {
+  font-size: 14px;
+  color: black;
+}
+
+/* users/edit================================ */
+.user-edit-main {
+  position: absolute;
+  top: 64px;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  background-color: beige;
+}
+
+.user-edit-container {
+  margin-left:64px;
+}
+
+.user-edit-container h1 {
+  margin-top: 65px;
+}
+
+.user-edit-form {
+  background-color: white;
+  width: 600px;
+  height: auto;
+  margin: 50px auto;
+  padding: 20px 50px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px gray;
+}
+
+.user-edit-form p {
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+.input {
+  height: 40px;
+  width: 100%;
+}
+
+.submit {
+  width: 50px;
+  margin: 20px 0 30px 0;
+}
+
+.edit-error-message {
+  color: red;
+}
+
+/* users/new ================================ */
+.background-image {
+  width: 100%;
+  margin: 0;
+  height: auto;
+  min-height: 100vh;
+  position: absolute;
+  top: 64px;
+  background-size: cover;
+  background-image: url("/exit2.jpg");
+}
+
+.signup-container {
+  position: absolute;
+  top: 64px;
+  margin-left: 64px;
+  color: white;
+}
+
+.signup-container h1 {
+  margin-bottom: 15px;
+}
+
+.signup-form input {
+  margin-bottom: 10px;
+}
+
+.signup-form p {
+  margin-bottom: 5px;
+}
+
+.signup-error-message {
+  color: red;
+}
+
+.submit-btn {
+  margin-top: 15px;
+}
+
+/* users/login_form ================================ */
+.background-image {
+  width: 100%;
+  margin: 0;
+  height: auto;
+  min-height: 100vh;
+  position: absolute;
+  top: 64px;
+  background-size: cover;
+  background-image: url("/exit2.jpg");
+}
+
+.login-container {
+  position: absolute;
+  top: 64px;
+  margin-left: 64px;
+  color: white;
+}
+
+.login-container h1 {
+  margin-bottom: 15px;
+}
+
+.login-form input {
+  margin-bottom: 10px;
+}
+
+.login-form p {
+  margin-bottom: 5px;
+}
+
+.login-error-message {
+  color: red;
+}
+
+.submit-btn {
+  margin-top: 15px;
+}
