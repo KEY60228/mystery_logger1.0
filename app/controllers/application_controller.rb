@@ -30,7 +30,7 @@ class ApplicationController < ActionController::Base
       if done_performance.user_id != @current_user.id
         flash[:notice] = "感想は公演に参加してからね！"
         redirect_to("/performances/index")
-      end        
+      end
     end
   end
 
